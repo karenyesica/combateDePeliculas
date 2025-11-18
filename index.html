@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Plantilla TP FINAL JS</title>
+    <link rel="icon" href="img/Favicon.png" type="image/png" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="img/studio-ghibli-logo.svg" alt="logo de estudio ghibli" />
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+          <i class="bi bi-list"></i>
+        </button>
+        <nav id="nav">
+          <button class="cerrar-toggle" id="menuCerrar">
+            <i class="bi bi-x"></i>
+          </button>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#api">Jugar</a></li>
+            <li><a href="#buscador">Buscador</a></li>
+            <li><a href="#formulario">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section id="inicio">
+      <div class="container">
+        <div class="hero-content">
+          <h1>¡Bienvenidx!</h1>
+          <p>
+            Atrevete a jugar: la magia de Ghibli se mezcla con el azar. ¿Estás
+            preparado?
+          </p>
+          <a href="#api" class="btn">¡A Jugar!</a>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN API -->
+    <section id="api">
+      <div class="container api-container">
+        <h2>¡Comencemos el combate!</h2>
+        <div class="btn-conteiner">
+          <button id="cartas-oponente" class="btn btn-juego">
+            Cartas oponente
+          </button>
+          <button id="mis-cartas" class="btn btn-juego">Mis cartas</button>
+          <button id="ver-resultado" class="btn btn-juego">
+            Ver resultado
+          </button>
+          <button id="reiniciar" class="btn btn-juego">Reiniciar juego</button>
+        </div>
+        <p id="verError"></p>
+        <div class="resultados"></div>
+        <div class="api-cards">
+          <div class="cartas-oponente"></div>
+          <div class="mis-cartas"></div>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN BUSCADOR -->
+    <section id="buscador">
+      <div class="container">
+        <div id="buscador-content">
+          <h2>Buscador de películas de Estudio Ghibli</h2>
+          <p>
+            Buscá el título de una película y descubrí más de ella. Actualmente
+            solo se puede buscar por el título en inglés
+          </p>
+          <div id="filter">
+            <input
+              type="text"
+              id="name-filter"
+              autocomplete="off"
+              placeholder="Filtro por título"
+            />
+            <button id="buttonBuscador" class="btn btn-buscador">
+              Buscar película
+            </button>
+          </div>
+          <p class="errorTitulo"></p>
+          <div class="container buscador-container">
+            <div id="Resultadopelicula"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECCIÓN FORMULARIO -->
+    <section id="formulario">
+      <div class="container">
+        <div class="form-container">
+          <h2>Formulario de Contacto</h2>
+          <p>Completa el formulario para ponerte en contacto con nosotros.</p>
+
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" />
+              <div class="error" id="errorNombre"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="off" />
+              <div class="error" id="errorEmail"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option value="">Selecciona un asunto</option>
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="problema">Reportar problema</option>
+              </select>
+              <div class="error" id="errorAsunto"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+              <div class="error" id="errorMensaje"></div>
+            </div>
+
+            <button type="submit" class="btn btn-mensaje">
+              Enviar Mensaje
+            </button>
+          </form>
+
+          <div class="success-message" id="successMessage">
+            ¡Gracias por tu mensaje! Te contactaremos pronto.
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <p>2025 Sitio para curso JS TECNO3F. Karen Benitez.</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
