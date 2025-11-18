@@ -513,6 +513,9 @@ footer {
     display: block;
   }
 
+  .hero-content {
+    padding-bottom: 2.5rem;
+  }
   .buscador-card-content {
     flex-direction: column;
   }
