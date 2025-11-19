@@ -15,7 +15,7 @@ Además, el sitio permite **buscar** películas según el título en inglés (la
 **Combate de Películas de Estudio Ghibli** es una página web **interactiva y responsive** que combina:
 
 - Contenido informativo sobre Studio Ghibli.
-- Consumo dinámico de una API pública [**GhibliAPI](https://ghibliapi.vercel.app/films).**
+- Consumo dinámico de una API pública [GhibliAPI](https://ghibliapi.vercel.app/films).
 - Interacciones con JavaScript.
 - Validación visual y funcional de un formulario.
 
